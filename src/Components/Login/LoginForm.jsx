@@ -15,14 +15,14 @@ const LoginForm = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
     if (username.validate() && password.validate()) {
       userLogin(username.value, password.value);
     }
   }
 
   return (
-    <section className="animeLeft">
+    <>
+    <section className="animeLeft container">
       <h1 className="title">Login</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input name="username" label="Usuário" type="text" {...username} />
@@ -31,10 +31,10 @@ const LoginForm = () => {
         {loading ? (
           <Button disabled>Carregando ...</Button>
         ) : (
-          <Button>Entrar</Button>
+          <Button>ENTRAR</Button>
         )}
 
-        <Erro error={error} />
+        <Erro error={error} /> 
       </form>
       <Link className={styles.perdeu} to="/login/perder">
         Perdeu a senha?
@@ -42,9 +42,10 @@ const LoginForm = () => {
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastra-se</h2>
         <p>Ainda não possui conta? Cadastra-se no site.</p>
-        <Link className={stylesBtn.button} to="/login/criar">Cadastro</Link>
+        <Link className={stylesBtn.button} to="/login/criar">CADASTRO</Link>
       </div>
     </section>
+    </>
   );
 };
 
