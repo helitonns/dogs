@@ -31,7 +31,7 @@ const LoginForm = () => {
         {loading ? (
           <Button disabled>Carregando ...</Button>
         ) : (
-          <Button>ENTRAR</Button>
+          <Button>Entrar</Button>
         )}
 
         <Error error={error} /> 
@@ -42,7 +42,7 @@ const LoginForm = () => {
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastra-se</h2>
         <p>Ainda não possui conta? Cadastra-se no site.</p>
-        <Link className={stylesBtn.button} to="/login/criar">CADASTRO</Link>
+        <Link className={stylesBtn.button} to="/login/criar">Cadastro</Link>
       </div>
     </section>
     </>
