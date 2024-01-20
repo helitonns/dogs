@@ -32,10 +32,6 @@
   display: none;
 }
 
-.photo:hover .visualizacao {
-  display: flex;
-}
-
 .visualizacao::before {
   content: "";
   display: inline-block;
@@ -43,4 +39,8 @@
   height: 10px;
   margin-right: 0.25rem;
   background: url("../../Assets/visualizacao.svg") no-repeat;
+}
+
+.photo:hover .visualizacao {
+  display: flex;
 }
